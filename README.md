@@ -31,16 +31,12 @@ Please enter the path of the corresponding checkpoint when running
 ```python eval.py```
 ### Examples of input data formats:
 
-> dataset/ISIC
-
->> train
-
->> image
-
->> mask
-
->> star_center_point (Each.txt file (obtained during the preprocessing stage) contains the coordinates of the center point corresponding to each image )
-
-> test
-
-> val
+```plaintext
+dataset/ISIC
+    ├── train
+    │   ├── image              
+    │   ├── mask               
+    │   └── star_center_point  # (Each.txt file (obtained during the preprocessing stage) contains the coordinates of the center point corresponding to each image )
+    ├── test                   
+    └── val                    
+```
