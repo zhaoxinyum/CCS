@@ -7,30 +7,40 @@ First download a [model checkpoint](https://dl.fbaipublicfiles.com/segment_anyth
 
 Install relative packages
 
-```pip install -r requirements.txt```
+```plaintext
+pip install -r requirements.txt
+```
 
 ## Data preprocessing
 Data preprocessing: Obtain the set of center points  
 Sample points on the boundary: 
 
-```python tools/starcenter.py```
+```plaintext
+python tools/starcenter.py
+```
 
 Sample points on the skeleton: 
 
-```python tools/opencenter.py```
+```plaintext
+python tools/opencenter.py
+```
 
 After preprocessing, the coordinates of the sampled points will be saved, or the vector field will be saved as a float32 pt file
 ## Training
 Optional training methods: lora fine-tuning: --model_name SAM, adding CCS module: --model_name SAMccs, shape loss: --model_name SAMsloss
 
-```python sam_train_with_lora.py --dataname ISIC --model_name SAMccs```
+```plaintext
+python sam_train_with_lora.py --dataname ISIC --model_name SAMccs
+```
 
 ## Evaluation
 Please enter the path of the corresponding checkpoint when running
 
-```python eval.py```
+```plaintext
+python eval.py
+```
 ### Examples of input data formats:
-
+Here we have only provided a small amount of data
 ```plaintext
 dataset/ISIC
     ├── train
