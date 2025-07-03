@@ -1,0 +1,32 @@
+The code requires python>=3.10, as well as torch>=2.5.1 and torchvision>=0.20.1
+使用下面代码安装需要的packages
+pip install -r requirements.txt
+
+based on sam1 的代码 sam1ccs_code文件夹中
+	-----数据预处理-------
+        边界向量场：tools/starcenter.py
+        开操作向量场：tools/opencenter.py
+        预处理后会保存采样的中心点坐标，或者将向量场保存为float32的pt文件
+        -----训练---------------
+        训练代码：sam_train_with_lora.py，
+                1、运行samccs的训练：
+                python sam_train_with_lora.py --dataname ISIC --model_name SAMccs
+                2、运行sam微调：
+                python sam_train_with_lora.py --dataname ISIC --model_name SAM
+                3、运行损失函数训练：
+                python sam_train_with_lora.py --dataname ISIC --model_name SAMsloss
+	------测试--------------
+        测试代码：eval.py 
+                运行时请输入对应的checkpoint的地址
+        其他代码：segment_anything.modeling中的CCS_block.py是CCS模块的代码
+                          smooth_field_torch.py 基于给定点的坐标，计算凸组合星形对应的方向场
+输入的数据格式举例：
+-dataset/ISIC
+        -train
+                -image
+                -mask
+                -star_center_point  （该文件夹中的每一个.txt文件包含的是每一个image对应的中心点的坐标）
+        -test
+        -val
+
+demo文件夹中是一个合成图片的给定三个中心点的简单实验，运行ccs_demo.py查看结果
