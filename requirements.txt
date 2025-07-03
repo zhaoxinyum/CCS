@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # requirements.txt
 matplotlib
 opencv-python
@@ -12,18 +12,4 @@ iopath
 pandas
 
 
-=======
-# requirements.txt
-matplotlib
-opencv-python
-onnx
-onnxruntime
-scikit-image
-wandb
-tqdm
-tensorboard
-iopath
-pandas
 
-
->>>>>>> 2310975c1d638e8d5ccc7c1586542583ce045da7
