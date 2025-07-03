@@ -1,5 +1,6 @@
 Convex Combination Star Shape Prior for Data-driven Image Semantic Segmentation
 ======
+![](https://github.com/zhaoxinyum/CCS/raw/master/network_sam_ccs.png)
 ## Installation
 The code requires python>=3.10, as well as torch>=2.5.1 and torchvision>=0.20.1  
 First download a [model checkpoint](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth),We use 'sam_vit_b_01ec64' as our basic model. Please download this weight and place it in the "parameterfault" folder 
