@@ -1,0 +1,13 @@
+# requirements.txt
+matplotlib
+opencv-python
+onnx
+onnxruntime
+scikit-image
+wandb
+tqdm
+tensorboard
+iopath
+pandas
+
+
